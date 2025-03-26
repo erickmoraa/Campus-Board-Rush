@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Stile generale del font Bebas Neue */
+body {
+    font-family: 'Bebas Neue', sans-serif; /* Font elegante e dinamico */
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem; /* Dimensione generosa per titoli di impatto */
+    letter-spacing: 1px; /* Aggiunge un po' di respiro tra le lettere */
+    text-transform: uppercase; /* Titoli in maiuscolo per maggiore dinamismo */
+}
+
+p, a, button {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem; /* Testo leggibile ma accattivante */
+
+}
+
+
+
+/* Stile generale per il contenitore del menu */
+.menu {
+    position: absolute;       /* Posiziona il menu rispetto al contenitore */
+    top: 20px;                /* Distanza dall'alto */
+    right: 15px;              /* Posiziona il menu a destra */
+    display: flex;            /* Dispone gli elementi orizzontalmente */
+    justify-content: flex-end;/* Allinea il menu a destra */
+    align-items: center;      /* Allinea gli elementi verticalmente */
+    border-radius: 5px;       /* Angoli arrotondati */
+    padding: 10px;            /* Spaziatura interna */
+}
+
+
+/* Stile per la lista dei link */
+.menu ul {
+    display: flex;            /* Allinea i link in fila orizzontale */
+    list-style: none;         /* Rimuove i punti elenco */
+    margin: 0;                /* Rimuove margini */
+    padding: 0;               /* Rimuove padding */
+}
+
+.menu ul li {
+    margin-right: 20px;       /* Spazio tra i link */
+}
+
+.menu ul li:last-child {
+    margin-right: 0;          /* Nessun margine per l'ultimo link */
+}
+
+/* Stile per i link */
+.menu ul li a {
+    text-decoration: none;    /* Rimuove sottolineatura dei link */
+    font-size: 1rem;          /* Dimensione del font dei link */
+    color: #333;              /* Colore dei link */
+    padding: 5px 10px;        /* Spaziatura interna per i link */
+    border-radius: 3px;       /* Angoli arrotondati per i link */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Effetto animazione */
+}
+
+/* Effetto hover sui link */
+.menu ul li a:hover {
+    background-color: crimson;    /* Colore di sfondo quando si passa sopra */
+    transform: scale(1.05);   /* Leggero ingrandimento dei link */
+}
+
+/* Quando si clicca sui link (active) */
+.menu ul li a:active {
+    background-color: seagreen;   /* Colore scuro per il link cliccato */
+    color: #fff;              /* Testo bianco */
+}
+
+/* Media query per schermi piccoli (smartphone) */
+@media (max-width: 768px) {
+    .menu {
+        top: 15px;                /* Riduci la distanza dall'alto */
+        left: 10px;               /* Riduci la distanza dal lato sinistro */
+        padding: 8px;             /* Ridimensiona il contenitore */
+    }
+
+    .menu ul {
+        flex-direction: row;   /* Cambia la disposizione in colonna per schermi piccoli */
+        align-items: flex-start;  /* Allinea i link a sinistra */
+        gap: 10px;                /* Spaziatura tra i link */
+    }
+
+    .menu ul li {
+        margin-right: 0;          /* Rimuove margini tra i link */
+    }
+
+    .menu ul li a {
+        font-size: 0.9rem;        /* Riduci la dimensione dei link */
+        padding: 8px 12px;        /* Aggiusta la spaziatura interna */
+    }
+}
+
+.headerComponent_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.headerComponent_container img {
+    max-height: 70px; /* Adatta l'altezza massima in base alle necessità */
+    object-fit: contain;
+}
+
+
+/* Hero Section - Immagine */
+.spazio-foto {
+    width: 100%; /* La sezione occupa tutta la larghezza */
+    height: auto; /* Altezza adattabile */
+    text-align: center; /* Centra il contenitore */
+    background-color: #f4f4f4; /* Sfondo neutro */
+    padding: 1px 0; /* Spaziatura sopra e sotto */
+}
+
+.spazio-foto .photo-container img {
+    width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: cover; /* Riempie il contenitore senza distorsioni */
+}
+
+/* Hero Section - Contenuto */
+.spazio-contenuto {
+    width: 100%; /* Copre tutta la larghezza */
+    text-align: center; /* Centralizza il contenuto */
+    background-color: #ffffff; /* Sfondo bianco */
+
+}
+
+.spazio-contenuto .hero-content {
+    max-width: 800px; /* Limita la larghezza per maggiore leggibilità */
+    margin: 0 auto; /* Centro orizzontale */
+}
+
+.spazio-contenuto h2 {
+    font-size: 2.5rem; /* Dimensione del titolo */
+    color: #333; /* Colore testo */
+    margin-bottom: 20px; /* Spaziatura tra titolo e contenuto */
+}
+
+.spazio-contenuto p {
+    font-size: 1.2rem; /* Testo principale */
+    color: #666; /* Grigio per il testo */
+    margin-bottom: 30px; /* Spaziatura sotto il paragrafo */
+}
+
+.spazio-contenuto .play-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: seagreen; /* Colore arancione del pulsante */
+    color: white; /* Testo bianco */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    border-radius: 5px; /* Angoli arrotondati */
+    font-size: 1.2rem; /* Dimensione del pulsante */
+    transition: background 0.3s ease; /* Effetto hover */
+}
+
+.spazio-contenuto .play-button:hover {
+    background-color: crimson; /* Cambia colore quando si passa sopra */
+}
+
+/* Responsività - Adattamenti per smartphone */
+@media (max-width: 768px) {
+    .spazio-foto .photo-container img {
+        object-fit: contain; /* Mostra l'intera immagine su dispositivi mobili */
+    }
+
+    .spazio-contenuto h2 {
+        font-size: 1.8rem; /* Riduce il titolo su schermi piccoli */
+    }
+
+    .spazio-contenuto p {
+        font-size: 1rem; /* Testo più piccolo per una visualizzazione ottimale */
+    }
+
+    .spazio-contenuto .play-button {
+        font-size: 1rem; /* Riduce il pulsante su smartphone */
+    }
+}
+
+/* Game Promotion */
+.game-promotion {
+    background-color: white;
+    padding: 50px;
+}
+
+.promotion-container {
+    display: flex; /* Allinea gli elementi in orizzontale */
+    align-items: center; /* Centra verticalmente il testo e l'immagine */
+    justify-content: space-between; /* Crea spazio uniforme tra testo e immagine */
+}
+
+.text-content {
+    flex: 1; /* Occupa lo spazio necessario */
+    padding-right: 20px; /* Spazio tra il testo e l'immagine */
+    text-align: left;
+}
+
+.image-content {
+    display: flex; /* Gestisce il layout flessibile */
+    justify-content: center; /* Centra l'immagine orizzontalmente */
+    align-items: center; /* Centra l'immagine verticalmente */
+    max-width: 340px; /* Limita la larghezza massima dell'immagine */
+    margin: 0 auto; /* Centra l'intero contenitore nel layout */
+}
+
+
+.image-content2 {
+    display: flex; /* Per gestire l'immagine all'interno */
+    justify-content: flex-end; /* Allinea l'immagine a destra */
+    align-items: flex-start; /* Allinea l'immagine in alto */
+    padding-bottom: 40px; /* Aggiusta l'altezza regolando il padding */
+}
+
+
+
+.image-content img {
+    width: 100%;
+    max-width: 500px; /* Dimensioni massime per l'immagine */
+    height: auto; /* Mantiene le proporzioni */
+}
+
+/* Extra Section */
+.extra-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.extra-section img {
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Stile generale per la sezione */
+.three-sections {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.three-sections .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.three-sections .row {
+    display: flex;
+    gap: 20px; /* Spaziatura tra le sotto-sezioni */
+    justify-content: center; /* Centra le sotto-sezioni */
+}
+
+.three-sections .section {
+    flex: 1; /* Assicura che tutte le sotto-sezioni abbiano la stessa dimensione */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.three-sections .section img {
+    width: 100%;
+    max-width: 300px; /* Dimensione massima dell'immagine */
+    height: auto;
+    border-radius: 10px;
+}
+
+.three-sections .section h3 {
+    color: #333;
+    margin-top: 15px;
+}
+
+.three-sections .section p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Footer */
+.site-footer {
+    background: seagreen;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Stile per la sezione social */
+.social-section {
+    display: flex; /* Posiziona i loghi in fila orizzontale */
+    justify-content: center; /* Centra gli elementi */
+    gap: 20px; /* Spaziatura tra i loghi */
+    margin-top: 20px; /* Spaziatura superiore rispetto al testo */
+}
+
+/* Stile per ogni elemento social */
+.social-item {
+    text-align: center; /* Centra il testo sotto ogni logo */
+}
+
+.social-logo {
+    width: 50px; /* Dimensione del logo */
+    height: 50px; /* Dimensione del logo */
+    margin-bottom: 10px; /* Spaziatura sotto il logo */
+}
+.domande {
+    padding: 20px;
+    background-color: #f4f4f4; /* Sfondo neutro */
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.domande h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    letter-spacing: 1px; /* Coerenza con il font Bebas Neue */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.domande-sezione {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.domande-sezione h3 {
+    color: crimson; /* Colore dinamico per titoli di sottosezione */
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.domande-sezione p {
+    color: #666;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.piattaforme {
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco per contrasto */
+    border-radius: 8px; /* Angoli arrotondati */
+    margin: 20px;
+}
+
+.piattaforme h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase; /* Titolo principale in maiuscolo */
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.piattaforme-sezione {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Sfondo neutro per le sottosezioni */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.piattaforme-sezione h3 {
+    color: crimson; /* Colore dinamico per titoli delle sottosezioni */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.piattaforme-sezione p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.piattaforme-sezione ul {
+    margin: 10px 0 0;
+    padding-left: 20px; /* Indenta la lista per una struttura chiara */
+}
+
+.piattaforme-sezione ul li {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+.game-characters {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Sfondo chiaro per separare visivamente la sezione */
+}
+
+.character-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.character-text {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.character-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-image img {
+    max-width: 100%;
+    height: auto;
+}
+.video-element {
+    width: 100%; /* Rendi il video fluido */
+    height: auto; /* Mantiene le proporzioni */
+    max-width: 800px; /* Limita la larghezza massima su schermi grandi */
+    display: block; /* Evita spazi extra sotto il video */
+    margin: 0 auto; /* Centra il video */
+    object-fit: cover; /* Assicura un buon adattamento */
+}
+
+/* Per schermi più piccoli */
+@media (max-width: 768px) {
+    #video-element {
+        max-width: 100%; /* Il video occupa tutta la larghezza disponibile */
+        height: auto; /* Mantiene il rapporto di aspetto */
+    }
+}
